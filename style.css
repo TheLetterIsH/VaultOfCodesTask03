@@ -1,0 +1,126 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: url('./assets/mountain-range.jpg');
+    background-size: cover;
+    background-position: 0 25%;
+}
+
+.container{
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 16px;
+}
+
+.container header{
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container .form{
+    margin-top: 30px;
+}
+
+.form .input-box{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-box label, .select-box label{
+    color: #333;
+}
+
+.form :where(.input-box input, .select-box select){
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.form .column{
+    display: flex;
+    column-gap: 15px;
+}
+
+.form .select-box{
+    width: 100%;
+    margin-top: 20px;
+}
+
+#message{
+    display: none;
+}
+
+/* file upload button */
+input[type="file"]::file-selector-button {
+    border-radius: 4px;
+    padding: 0 16px;
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+    margin-right: 16px;
+    transition: background-color 200ms;
+    margin-top: 1px;
+}
+  
+  /* file upload button hover state */
+    input[type="file"]::file-selector-button:hover {
+    background-color: #f3f4f6;
+}
+
+  /* file upload button active state */
+    input[type="file"]::file-selector-button:active {
+    background-color: #e5e7eb;
+}
+
+.form button{
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    background-color: lightsalmon;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.form button:hover{
+    transition: transform 100ms;
+    transform: translateY(-10px);
+}
+
+/* Responsiveness */
+@media screen and (max-width: 500px) {
+    .form .column{
+        flex-wrap: wrap;
+    }      
+}
